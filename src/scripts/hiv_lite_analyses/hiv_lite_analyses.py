@@ -37,10 +37,14 @@ df = logs['tlo.methods.hiv_lite']['hiv_infection_cases']
 df['year'] = df.date.dt.year
 
 print(df)
-
-df.plot.bar(x='year', y='indiv_0_14', color='blue')
-plt.title('HIV Infection Cases')
+df = df.set_index('year')
+df.drop("date", axis=1, inplace=True)
+df.plot.bar(stacked=True)
+plt.title('HIV Infection Cases Over Time')
 plt.xlabel('Year')
 plt.ylabel('Number of Cases')
 plt.xticks(rotation=45)
+plt.tight_layout()
+# Save the plot to a file
+plt.savefig('hiv_infection_cases_over_time.png', bbox_inches='tight')
 plt.show()

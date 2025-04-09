@@ -128,11 +128,11 @@ class HivLiteLoggingevent(RegularEvent, PopulationScopeEventMixin):
 
         hiv_infection_cases_by_age_group = {
             'indiv_0_14': len(indiv_0_14),
-            'indiv_15-24': len(indiv_15_24),
-            'indiv_25-34': len(indiv_25_34),
-            'indiv_35-44': len(indiv_35_44),
-            'indiv_45-54': len(indiv_45_54),
-            'indiv_55-64': len(indiv_55_64),
+            'indiv_15_24': len(indiv_15_24),
+            'indiv_25_34': len(indiv_25_34),
+            'indiv_35_44': len(indiv_35_44),
+            'indiv_45_54': len(indiv_45_54),
+            'indiv_55_64': len(indiv_55_64),
             'indiv_65_plus': len(indiv_65_plus)
             }
         
