@@ -31,20 +31,23 @@ sim.register(
     )
 
 sim.make_initial_population(n=20000)
+
+# sim.modules['HivLite'].parameters['art_coverage'] = 0.8
+
 sim.simulate(end_date=end_date)
 logs = parse_log_file(sim.log_filepath)
-df = logs['tlo.methods.hiv_lite']['hiv_infection_cases']
+df = logs['tlo.methods.hiv_lite']['aids_cases']
 df['year'] = df.date.dt.year
 
 print(df)
 df = df.set_index('year')
 df.drop("date", axis=1, inplace=True)
 df.plot.bar(stacked=True)
-plt.title('HIV Infection Cases Over Time')
+plt.title('AIDs Cases Over Time')
 plt.xlabel('Year')
-plt.ylabel('Number of Cases')
+plt.ylabel('Number of AIDS Cases')
 plt.xticks(rotation=45)
 plt.tight_layout()
 # Save the plot to a file
-plt.savefig('hiv_infection_cases_over_time.png', bbox_inches='tight')
+plt.savefig('AIDS_cases_over_time.png', bbox_inches='tight')
 plt.show()
