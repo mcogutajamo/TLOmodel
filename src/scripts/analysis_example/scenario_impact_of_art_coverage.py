@@ -70,3 +70,6 @@ if __name__ == '__main__':
 # tlo scenario-run src/scripts/analysis_example/scenario_impact_of_art_coverage.py 
 # tlo parse-log outputs/scenario_impact_of_art_coverage-2025-04-10T110333Z/0/0
 # tlo parse-log outputs/scenario_impact_of_art_coverage-2025-04-10T110333Z/1/0
+
+# tlo parse-log outputs/scenario_impact_of_art_coverage-2025-04-10T114405Z/0/0
+# tlo parse-log outputs/scenario_impact_of_art_coverage-2025-04-10T114405Z/1/0
